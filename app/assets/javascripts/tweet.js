@@ -8,6 +8,7 @@ var MAX_CHARS = 140;
 var BACKSPACE = 8;
 var GREEN = '#1BE035';
 var SLIDE = 150;
+var MIN_WIDTH = 650;
 var count = 0;
 
 // Document ready.
