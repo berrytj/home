@@ -15,6 +15,14 @@ $(function() {
 
 	bindInputEvents();
 
+	$('#submit').click(function(e) {
+
+		var $input = $('#input');
+		// Don't submit teaser text as tweet.
+		if ($input.css('color') !== ORIG_COLOR) submitTweet(e, $input);
+
+	});
+
 });
 
 // Bind functions to events triggered on #input.
@@ -168,7 +176,7 @@ var isDelete = function(code) {
 // Cache the template for a tweet.
 var template = _.template("<div id='<%- id %>' class='tweet' style='display:none;'>" +
 							  "<div class='avatar'></div>" +
-							  "<div class='right-side'>" +
+							  "<div class='text-area'>" +
 								  "<div class='text'><%- text %></div>" +
 								  "<div class='details'>" +
 								  	  "<span class='time'><i><%- time %></i></span>" +
