@@ -43,9 +43,9 @@ var bindInputEvents = function() {
 
 	}).bind('copy paste', function(e) {
 
-    	e.preventDefault();
+    		e.preventDefault();
     	
-    });
+    	});
 
 };
 
