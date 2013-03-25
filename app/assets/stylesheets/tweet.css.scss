@@ -1,0 +1,148 @@
+
+
+$family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+$input-width:50%;
+$input-left:(100% - $input-width) / 2;
+$tweets-width:$input-width * 1.3;
+$tweets-left:(100% - $tweets-width) / 2;
+
+#preload1 { background: url('dark_star.png')  no-repeat -9999px -9999px; }
+#preload2 { background: url('dark_reply.png') no-repeat -9999px -9999px; }
+
+body {
+	font: {
+		family:$family;
+		size:25px;
+		weight:200;
+	}
+	background-image:url('wavegrid.png');
+}
+
+#count {
+	margin-left:72%;
+	margin-top:5%;
+	margin-bottom:5px;
+	min-height:30px;
+	opacity:0.7;
+	font-size:23px;
+}
+
+#input {
+	font: {
+		family:$family;
+		size:18px;
+		style:italic;
+		weight:200;
+	}
+	width:$input-width;
+	height:20%;
+	margin-left:$input-left;
+	margin-bottom:50px;
+	padding:10px;
+	color:#888888;
+	border-radius:10px;
+	border:none;
+	outline:none;
+	box-shadow:0px 0px 25px 25px rgba(255,174,0,0.1);
+	background-color:rgba(255,255,255,0.6);
+	resize:none;
+	z-index:100;
+
+	&:focus {
+		box-shadow:0px 0px 5px 1px orange;
+		border:none;
+		outline:none;
+	}
+}
+
+#tweets {
+	width:$tweets-width;
+	min-height:500px;
+	margin-left:$tweets-left;
+	font-size:25px;
+}
+
+.tweet {
+	width:100%;
+	padding:15px;
+	margin-bottom:35px;
+	font-family:Helvetica;
+	border-radius:7px;
+	box-shadow:inset 0px 0px 4px 3px rgba(0,0,0,0.4);
+	background:rgba(161,0,94,0.05);
+}
+
+.avatar {
+	display:inline-block;
+	vertical-align:top;
+	width:13%;
+	height:87px;
+	margin-right:12px;
+	background-image:url('me.jpg');
+	background-repeat:no-repeat;
+	background-size:100%;
+	border-radius:4px;
+	border:1px inset white;
+}
+
+.right-side {
+	display:inline-block;
+	width:83%;
+}
+
+.text {
+	min-height:55px;
+	vertical-align:top;
+	word-wrap:break-word;
+}
+
+.details {
+	width:100%;
+	text-align:right;
+	border-radius:0;
+
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+	span {
+		font-size:13px;
+		border-radius:0px;
+	}
+}
+
+.time {
+	margin-right:25px;
+	color:gray;
+}
+
+.star {
+	display:inline-block;
+	width:19px;
+	height:19px;
+	margin-right:15px;
+	vertical-align:middle;
+	background-image:url('star.png');
+	background-repeat:no-repeat;
+	background-size:100%;
+
+	&:active { background-image:url('dark_star.png'); }
+}
+
+.reply {
+	display:inline-block;
+	width:19px;
+	height:19px;
+	margin-right:15px;
+	vertical-align:middle;
+	background-image:url('reply.png');
+	background-repeat:no-repeat;
+	background-size:90%;
+
+	&:active { background-image:url('dark_reply.png'); }
+}
+
+
