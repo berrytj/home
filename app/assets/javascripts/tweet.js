@@ -4,6 +4,7 @@
 var ENTER_KEY = 13;
 var TEXT_COLOR = '#333333';
 var ORIG_COLOR = 'rgb(136, 136, 136)';
+var ORIG_TEXT = 'What are you up to?'
 var MAX_CHARS = 140;
 var BACKSPACE = 8;
 var GREEN = '#1BE035';
@@ -26,7 +27,7 @@ $(function() {
 
 });
 
-// Bind functions to events triggered on #input.
+// Bind functions to the events triggered on #input.
 var bindInputEvents = function() {
 
 	$('#input').focus(function() {
@@ -88,9 +89,11 @@ var showMessage = function($obj) {
 
 	if ($obj.val() === '') {
 
-		$obj.val('What are you up to?').css({
+		$obj.val(ORIG_TEXT).css({
+
 			'color': ORIG_COLOR,
 			'font-style': 'italic',
+
 		});
 
 	}
@@ -135,7 +138,7 @@ var getCountColor = function(count) {
 	else if (fraction < 0.7) return '#F7E700';
 	else if (fraction < 0.8) return '#FFAE00';
 	else if (fraction < 0.9) return '#FFA629';
-	else 					 return '#FF4000';
+	else 			 return '#FF4000';
 
 };
 
