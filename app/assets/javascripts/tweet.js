@@ -160,13 +160,13 @@ var addToList = function(text) {
 // Return true if the keycode corresponds to a character/symbol/space.
 var isCharacter = function(code) {
 
-	return code == 32  || code == 59  ||  // spacebar  || firefox ;
-		   code == 61  || code == 173 ||  // firefox = || firefox -
-		   code >= 48  && code <= 57  ||
-		   code >= 65  && code <= 90  ||
-      	   code >= 97  && code <= 122 ||
-      	   code >= 186 && code <= 191 ||
-      	   code >= 219 && code <= 222;
+	 return code == 32  || code == 59  ||  // spacebar  || firefox ;
+		code == 61  || code == 173 ||  // firefox = || firefox -
+		code >= 48  && code <= 57  ||
+		code >= 65  && code <= 90  ||
+      		code >= 97  && code <= 122 ||
+      		code >= 186 && code <= 191 ||
+      		code >= 219 && code <= 222;
 };
 
 // Return true if the keycode corresponds to a deletion.
@@ -176,15 +176,15 @@ var isDelete = function(code) {
 
 // Cache the template for a tweet.
 var template = _.template("<div id='<%- id %>' class='tweet' style='display:none;'>" +
-							  "<div class='avatar'></div>" +
-							  "<div class='text-area'>" +
-								  "<div class='text'><%- text %></div>" +
-								  "<div class='details'>" +
-								  	  "<span class='time'><i><%- time %></i></span>" +
-								  	  "<span class='star'></span>" +
-									  "<span class='reply'></span>" +
-								  "</div>" +
-							  "</div>" +
-						  "</div>");
+				"<div class='avatar'></div>" +
+				"<div class='text-area'>" +
+					"<div class='text'><%- text %></div>" +
+					"<div class='details'>" +
+						"<span class='time'><i><%- time %></i></span>" +
+						"<span class='star'></span>" +
+						"<span class='reply'></span>" +
+					"</div>" +
+				"</div>" +
+			  "</div>");
 
 
